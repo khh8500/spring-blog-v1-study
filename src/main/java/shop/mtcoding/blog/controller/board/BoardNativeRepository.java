@@ -13,6 +13,8 @@ public class BoardNativeRepository {
 
     private final EntityManager em;
 
+
+
     public List<Board> findAll() {
         Query query = em.createNativeQuery("select * from board_tb order by id desc", Board.class);
         return query.getResultList();
