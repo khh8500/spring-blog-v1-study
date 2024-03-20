@@ -34,7 +34,7 @@ public class BoardNativeRepository {
     }
 
     public Board findById(int id) {
-        Query query = em.createNativeQuery("select * from board_tb where id =?", Board.class);
+        Query query = em.createNativeQuery("select * from board_tb where id=?", Board.class);
         query.setParameter(1, id);
         return (Board) query.getSingleResult();
     }
